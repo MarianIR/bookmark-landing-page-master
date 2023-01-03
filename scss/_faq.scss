@@ -1,0 +1,62 @@
+.faq-section {
+  width: 100%;
+  max-width: 50rem;
+  margin: 3rem auto 5rem;
+  .faq-article {
+    @include Article;
+    margin: 1rem auto;
+    padding: 1rem;
+    .faq-heading {
+      @include secondaryHeading;
+    }
+    .paragraph {
+      @include Paragraph;
+    }
+  }
+  .faq-container {
+    padding: 1rem;
+    .horizontal-line {
+      @include horizontalLine;
+    }
+    .qa-container {
+      margin: 2rem 0;
+      .question-box {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 0;
+        .question {
+          color: $neutralColor2;
+          font-size: 1.7rem;
+          font-weight: 500;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .arrow {
+          width: 1.2rem;
+          height: 0.9rem;
+          &.active-arrow {
+            transform: rotate(180deg);
+          }
+        }
+      }
+      .answer {
+        @include Paragraph;
+        &.active-answer {
+          display: block;
+        }
+      }
+    }
+  }
+  .more-info-btn {
+    display: block;
+    padding: 1rem;
+    color: #fdfdfd;
+    margin: 1rem auto;
+    background-color: $primaryColor1;
+    border: none;
+    border-radius: 0.5rem;
+  }
+}
